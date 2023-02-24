@@ -15,5 +15,6 @@ setup(
         'sklearn',
         'seaborn',
         'yfinance',
+        'statsmodels',
     ],
 )
