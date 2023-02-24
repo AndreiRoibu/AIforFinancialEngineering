@@ -1,6 +1,3 @@
-# AIforFinancialEngineering
-Repository supporting my learning of applied AI techniques and the core fundamentals of financial engineering.
-
 # AI for Financial Engineering
 ## Motivation
 This collection respresents a set codes aiding my learning of core fianancial engineering concepts and AI algorithms developed to be applied in a financial context. This repo contains codes for time series analysis, the Holt-winters explonential smoothing models, ARIMA and SARIMA, time series forecasting,  time series forecasting, portofolio optimisation and the CAPM algorithm, algorithmic trading, statistical factor models, regime detection with hidden Markov models and reinforcement (Q-)learning.

@@ -14,5 +14,6 @@ setup(
         'scipy',
         'sklearn',
         'seaborn',
+        'yfinance',
     ],
 )
