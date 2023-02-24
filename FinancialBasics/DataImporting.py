@@ -70,12 +70,13 @@ for symbol in symbols:
 
 # Delete any files with less than 10 lines:
 for symbol in symbols:
-    s = open(f"data/{symbol}.csv").readlines()
-    if len(s) < 10:
-        os.remove(f"data/{symbol}.csv")
+    if os.path.exists(f"data/{symbol}.csv"):
+        s = open(f"data/{symbol}.csv").readlines()
+        if len(s) < 10:
+            os.remove(f"data/{symbol}.csv")
 
-# Get all the file paths for the data files
-files = glob.glob('data/*.csv')
+# Get all the file paths for the data filess
+files = glob('data/*.csv')
 
 # Create a dataframe
 fullDf = None
@@ -93,7 +94,7 @@ for file in files:
     if fullDf is None:
         fullDf = df
     else:
-        fullDf = fullDf.append(df, ignore_index=True)
+        fullDf = pd.concat([fullDf, df])
 
 # Save the data to a csv file
 fullDf.to_csv('data/SP500full.csv', index=False)
@@ -114,7 +115,6 @@ for symbol in smallSymbols:
         if fullDfSmall is None:
             fullDfSmall = df
         else:
-            fullDfSmall = fullDfSmall.append(df, ignore_index=True)
-
+            fullDfSmall = pd.concat([fullDfSmall, df])
 # Save the data to a csv file
 fullDfSmall.to_csv('data/SP500sub.csv', index=False)
