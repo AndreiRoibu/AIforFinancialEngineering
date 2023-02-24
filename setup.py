@@ -12,7 +12,7 @@ setup(
         'pandas',
         'matplotlib',
         'scipy',
-        'sklearn',
+        'scikit-learn',
         'seaborn',
         'yfinance',
         'statsmodels',
