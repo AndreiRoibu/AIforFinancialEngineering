@@ -16,6 +16,7 @@ For installation on Linux or OSX, use the following commands. This will create a
 ```bash
 python3 -m venv env
 source env/bin/activate
+pip install --upgrade pip setuptools wheel
 pip install -e .
 ```
 
@@ -24,6 +25,16 @@ Alternativelly, run the setup.sh file as follows:
 ```bash
 ./setup.sh
 ```
+
+If using a conda environment, use the following steps and the provided requirements.txt file (similar to setup.py):
+
+```bash
+conda create -y --name AIforFinancialEngineering python=3.9.7
+conda activate AIforFinancialEngineering
+pip install --upgrade pip setuptools wheel
+conda install --force-reinstall -y --name AIforFinancialEngineering -c conda-forge --file requirements.txt
+```
+
 
 ## Usage
 In order to run the solver, type the following commands int the activated python environment. 
