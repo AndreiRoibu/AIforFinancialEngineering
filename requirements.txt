@@ -6,3 +6,4 @@ scikit-learn
 seaborn
 yfinance
 statsmodels
+pmdarima

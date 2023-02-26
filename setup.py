@@ -16,5 +16,6 @@ setup(
         'seaborn',
         'yfinance',
         'statsmodels',
+        'pmdarima',
     ],
 )
